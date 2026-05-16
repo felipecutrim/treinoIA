@@ -138,6 +138,23 @@ export default function Form({ onSubmit, isLoading }) {
               />
             </div>
 
+            {/* Removidos da Etapa 1: Percentual, Nível, Meses */}
+          </>
+        )}
+
+        {step === 2 && (
+          <>
+            {/* Nível */}
+            <div className="space-y-2">
+              <label className="block text-sm font-medium text-gray-300">📈 Nível na Musculação</label>
+              <select name="nivel" value={formData.nivel} onChange={handleChange}
+                className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent appearance-none transition-all">
+                <option value="Iniciante">Iniciante</option>
+                <option value="Intermediário">Intermediário</option>
+                <option value="Avançado">Avançado</option>
+              </select>
+            </div>
+
             {/* Percentual de Gordura */}
             <div className="space-y-2">
               <label className="block text-sm font-medium text-gray-300">🍕 Percentual de Gordura (Aprox.)</label>
@@ -150,17 +167,6 @@ export default function Form({ onSubmit, isLoading }) {
               </select>
             </div>
 
-            {/* Nível */}
-            <div className="space-y-2">
-              <label className="block text-sm font-medium text-gray-300">📈 Nível na Musculação</label>
-              <select name="nivel" value={formData.nivel} onChange={handleChange}
-                className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent appearance-none transition-all">
-                <option value="Iniciante">Iniciante</option>
-                <option value="Intermediário">Intermediário</option>
-                <option value="Avançado">Avançado</option>
-              </select>
-            </div>
-
             {/* Meses de Treino */}
             <div className="space-y-2 md:col-span-2">
               <label className="block text-sm font-medium text-gray-300">⏳ Tempo que já treina (em meses)</label>
@@ -170,11 +176,7 @@ export default function Form({ onSubmit, isLoading }) {
                 placeholder="Ex: 12 (digite 0 se for começar hoje)"
               />
             </div>
-          </>
-        )}
 
-        {step === 2 && (
-          <>
             {/* Objetivo */}
             <div className="space-y-2 md:col-span-2">
               <label className="block text-sm font-medium text-gray-300">🎯 Objetivo Principal</label>
