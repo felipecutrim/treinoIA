@@ -18,6 +18,7 @@ export default function Form({ onSubmit, isLoading }) {
     dias: '3',
     tempo: '1h',
     horario: 'Manhã',
+    divisaoTreino: 'Treino A, B e C',
     focoMuscular: ['Todas'],
     outroEsporte: '',
     restricoes: ''
@@ -171,9 +172,9 @@ export default function Form({ onSubmit, isLoading }) {
             <div className="space-y-2 md:col-span-2">
               <label className="block text-sm font-medium text-gray-300">⏳ Tempo que já treina (em meses)</label>
               <input 
-                type="number" name="mesesTreino" required min="0" value={formData.mesesTreino} onChange={handleChange}
+                type="number" name="mesesTreino" min="0" value={formData.mesesTreino} onChange={handleChange}
                 className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                placeholder="Ex: 12 (digite 0 se for começar hoje)"
+                placeholder="Ex: 12 (Opcional, deixe em branco se for iniciar hoje)"
               />
             </div>
 
@@ -187,6 +188,17 @@ export default function Form({ onSubmit, isLoading }) {
                 <option value="Força">Ganho de Força</option>
                 <option value="Condicionamento físico">Condicionamento físico</option>
                 <option value="Definição muscular">Definição muscular</option>
+              </select>
+            </div>
+
+            {/* Divisão de Treino */}
+            <div className="space-y-2 md:col-span-2">
+              <label className="block text-sm font-medium text-gray-300">🔀 Divisão de Treino</label>
+              <select name="divisaoTreino" value={formData.divisaoTreino} onChange={handleChange}
+                className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent appearance-none transition-all">
+                <option value="Treino A e B">Treino A e B</option>
+                <option value="Treino A, B e C">Treino A, B e C</option>
+                <option value="Treino A, B, C e D">Treino A, B, C e D</option>
               </select>
             </div>
 

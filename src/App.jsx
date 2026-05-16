@@ -31,9 +31,10 @@ Dados do usuário:
 - Percentual de gordura: ${formData.percentualGordura}
 - Sexo: ${formData.sexo}
 - Nível na musculação: ${formData.nivel}
-- Tempo de treino (experiência): ${formData.mesesTreino} meses
+- Tempo de treino (experiência): ${formData.mesesTreino || "0"} meses
 - Objetivo principal: ${formData.objetivo}
 - Grupo muscular prioritário: ${formData.focoMuscular.join(', ')}
+- Divisão de treino desejada: ${formData.divisaoTreino}
 - Dias por semana: ${formData.dias} dias
 - Horário do treino: ${formData.horario}
 - Tempo por treino: ${formData.tempo}
