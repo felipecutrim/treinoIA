@@ -33,7 +33,7 @@ Dados do usuário:
 - Nível na musculação: ${formData.nivel}
 - Tempo de treino (experiência): ${formData.mesesTreino} meses
 - Objetivo principal: ${formData.objetivo}
-- Grupo muscular prioritário: ${formData.focoMuscular}
+- Grupo muscular prioritário: ${formData.focoMuscular.join(', ')}
 - Dias por semana: ${formData.dias} dias
 - Horário do treino: ${formData.horario}
 - Tempo por treino: ${formData.tempo}
