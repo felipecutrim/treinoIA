@@ -63,7 +63,11 @@ export default function Form({ onSubmit, isLoading }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit(formData);
+    if (step === 1) {
+      handleNextStep();
+    } else {
+      onSubmit(formData);
+    }
   };
 
   return (
