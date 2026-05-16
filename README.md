@@ -1,36 +1,67 @@
-# TreinoIA 🏋️‍♂️🤖
+<div align="center">
+  <img src="https://img.icons8.com/color/96/000000/dumbbell.png" alt="Logo TreinoIA" />
+  <h1>🏋️‍♂️ TreinoIA</h1>
+  <p><strong>Gerador de Planos de Treino com Inteligência Artificial</strong></p>
+  
+  [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+  [![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)](https://vitejs.dev/)
+  [![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+  [![Gemini API](https://img.shields.io/badge/Google_Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://deepmind.google/technologies/gemini/)
+</div>
 
-O **TreinoIA** é uma aplicação web de portfólio que utiliza Inteligência Artificial para gerar planos de treinos semanais personalizados com base nos objetivos, nível de experiência e restrições físicas do usuário.
+<br />
 
-## 🚀 Tecnologias Utilizadas
-- **React** (Vite)
-- **Tailwind CSS** (Estilização e Animações)
-- **Lucide React** (Ícones)
-- **API da Anthropic (Claude 3.5 Sonnet)** para geração de treinos estruturados.
+## 📖 Sobre o Projeto
 
-## ⚠️ Aviso Importante de Segurança (Para Avaliadores)
+O **TreinoIA** é uma aplicação web moderna projetada para criar planos de treinamento de academia 100% personalizados. Utilizando a API de Inteligência Artificial do Google Gemini, o app analisa o perfil do usuário (idade, objetivos, disponibilidade e restrições) para gerar uma rotina semanal detalhada.
 
-Esta aplicação foi desenvolvida focada no **frontend (React + Vite)**. Por ser um projeto de portfólio, as chamadas à API da Anthropic são feitas diretamente do navegador, utilizando a variável de ambiente `VITE_ANTHROPIC_API_KEY`.
+Este projeto foi desenvolvido como peça de **portfólio**, demonstrando habilidades avançadas em desenvolvimento Frontend com React, consumo de APIs RESTful e estilização moderna.
 
-**Em um ambiente de Produção Real**, essa arquitetura seria considerada insegura, pois qualquer variável prefixada com `VITE_` é injetada no bundle final e exposta no navegador, permitindo que usuários mal-intencionados roubem a chave da API. 
+## ✨ Funcionalidades
 
-Para resolver isso em produção, a aplicação deveria conter um **Backend Intermediário** (como um servidor Node.js, Next.js API Routes ou AWS Lambda), que guardaria a API Key com segurança e faria as requisições à IA, retornando apenas os dados ao frontend.
+- 📝 **Formulário Dinâmico:** Coleta de dados como Nível de Experiência, Tempo de Treino (meses), Foco Muscular e Restrições Físicas.
+- 🤖 **Integração com IA:** Consumo direto da API do **Google Gemini (1.5 / 2.5 Flash)** para gerar os treinos.
+- 🎨 **Design Premium:** UI/UX focada no nicho fitness, utilizando **Dark Mode**, Glassmorphism e detalhes em Neon Green (`#39FF14`).
+- 📱 **Totalmente Responsivo:** A interface se adapta perfeitamente a computadores, tablets e smartphones (Mobile First).
+- 📋 **Exportação Fácil:** Botão integrado para copiar o treino gerado para a área de transferência em formato de texto limpo.
 
-## ⚙️ Como rodar localmente
+## ⚠️ Arquitetura e Segurança (Nota Técnica)
 
-1. Clone o repositório.
-2. Instale as dependências:
+Como este é um projeto focado exclusivamente no ecossistema Frontend (para portfólio), a chamada para a API da IA é feita diretamente pelo React (`App.jsx`), utilizando a variável `VITE_GEMINI_API_KEY`.
+
+> **Visão de Produção:** Em um ambiente empresarial real, essa arquitetura seria ajustada. A API Key não deve ser exposta no *bundle* do navegador. A abordagem correta seria criar um **Backend Intermediário** (Node.js, AWS Lambda, ou Next.js API Routes) para proteger a chave e atuar como ponte entre o cliente e o serviço do Google.
+
+## 🛠️ Como rodar o projeto localmente
+
+Siga os passos abaixo para testar o projeto em sua própria máquina:
+
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/felipecutrim/treinoIA.git
+   ```
+
+2. Entre na pasta do projeto:
+   ```bash
+   cd treinoIA
+   ```
+
+3. Instale as dependências:
    ```bash
    npm install
    ```
-3. Crie um arquivo `.env` na raiz do projeto baseado no `.env.example`:
-   ```bash
-   cp .env.example .env
-   ```
-4. Insira a sua chave da Anthropic no arquivo `.env`.
-5. Inicie o servidor de desenvolvimento:
+
+4. Configure a sua chave da API:
+   - Copie o arquivo `.env.example` e renomeie a cópia para `.env`
+   - Abra o `.env` e adicione sua chave gratuita do Google Gemini:
+     `VITE_GEMINI_API_KEY=sua_chave_aqui`
+
+5. Inicie o servidor local:
    ```bash
    npm run dev
    ```
 
-Desenvolvido por Felipe.
+---
+
+<div align="center">
+  Desenvolvido com 💻 e ☕ por <strong>Felipe Cutrim</strong>.
+</div>

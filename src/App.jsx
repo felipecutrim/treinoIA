@@ -31,6 +31,8 @@ Dados do usuário:
 - Objetivo: ${formData.objetivo}
 - Dias por semana: ${formData.dias}
 - Tempo por treino: ${formData.tempo}
+- Tempo de treino (experiência): ${formData.mesesTreino} meses
+- Foco Muscular: ${formData.focoMuscular}
 - Restrições: ${formData.restricoes || "Nenhuma"}
 
 O JSON deve seguir exatamente este modelo:

@@ -9,6 +9,8 @@ export default function Form({ onSubmit, isLoading }) {
     objetivo: 'Hipertrofia',
     dias: '3',
     tempo: '1h',
+    mesesTreino: '0',
+    focoMuscular: 'Todos',
     restricoes: ''
   });
 
@@ -132,6 +134,35 @@ export default function Form({ onSubmit, isLoading }) {
             <option value="1h">1 hora</option>
             <option value="1h30">1 hora e 30 minutos</option>
           </select>
+        </div>
+
+        {/* Meses de Treino */}
+        <div className="space-y-2">
+          <label className="block text-sm font-medium text-gray-300">Tempo de treino (em meses)</label>
+          <input 
+            type="number" 
+            name="mesesTreino" 
+            required
+            min="0"
+            value={formData.mesesTreino}
+            onChange={handleChange}
+            className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+            placeholder="Ex: 12 (para 1 ano)"
+          />
+        </div>
+
+        {/* Foco Muscular */}
+        <div className="space-y-2 md:col-span-2">
+          <label className="block text-sm font-medium text-gray-300">Foco Muscular</label>
+          <input 
+            type="text" 
+            name="focoMuscular" 
+            required
+            value={formData.focoMuscular}
+            onChange={handleChange}
+            className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+            placeholder="Ex: Todos os grupos, ou foco em Peito e Braços"
+          />
         </div>
 
         {/* Restrições */}
