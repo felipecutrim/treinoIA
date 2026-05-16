@@ -176,9 +176,9 @@ export default function Form({ onSubmit, isLoading }) {
             <div className="space-y-2 md:col-span-2">
               <label className="block text-sm font-medium text-gray-300">⏳ Tempo que já treina (em meses)</label>
               <input 
-                type="number" name="mesesTreino" min="0" value={formData.mesesTreino} onChange={handleChange}
+                type="number" name="mesesTreino" required min="0" value={formData.mesesTreino} onChange={handleChange}
                 className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                placeholder="Ex: 12 (Opcional, deixe em branco se for iniciar hoje)"
+                placeholder="Ex: 12 (digite 0 se for começar hoje)"
               />
             </div>
 
