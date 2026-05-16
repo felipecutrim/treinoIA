@@ -25,14 +25,19 @@ sem texto adicional, sem markdown, sem explicações fora do JSON.
 
 Dados do usuário:
 - Nome: ${formData.nome}
-- Idade: ${formData.idade}
+- Idade: ${formData.idade} anos
+- Peso: ${formData.peso} kg
+- Altura: ${formData.altura} cm
+- Percentual de gordura: ${formData.percentualGordura}
 - Sexo: ${formData.sexo}
-- Nível: ${formData.nivel}
-- Objetivo: ${formData.objetivo}
-- Dias por semana: ${formData.dias}
-- Tempo por treino: ${formData.tempo}
+- Nível na musculação: ${formData.nivel}
 - Tempo de treino (experiência): ${formData.mesesTreino} meses
-- Foco Muscular: ${formData.focoMuscular}
+- Objetivo principal: ${formData.objetivo}
+- Grupo muscular prioritário: ${formData.focoMuscular}
+- Dias por semana: ${formData.dias} dias
+- Horário do treino: ${formData.horario}
+- Tempo por treino: ${formData.tempo}
+- Pratica outro esporte: ${formData.outroEsporte || "Não"}
 - Restrições: ${formData.restricoes || "Nenhuma"}
 
 O JSON deve seguir exatamente este modelo:
